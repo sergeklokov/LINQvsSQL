@@ -1,0 +1,41 @@
+﻿Person ID        Name
+5                Babushka
+3                Dedushka
+4                McKayla
+1                Serge
+6                Serge
+2                Tristan
+
+
+People with phones (INNER JOIN)
+Name                     Number
+Babushka                 3333
+Dedushka                 2222
+Serge                    1111
+Tristan                  1111
+
+
+People with phones (OUTER JOIN..phone NOT NULL)
+Name                     Number
+Babushka                 3333
+Dedushka                 2222
+Serge                    1111
+Tristan                  1111
+
+
+People with phones (OUTER JOIN)
+Name                     Number
+Babushka                 3333
+Dedushka                 2222
+McKayla
+Serge                    1111
+Serge
+Tristan                  1111
+
+
+
+Press any key..
+
+
+
+
