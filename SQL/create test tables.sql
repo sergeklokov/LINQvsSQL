@@ -11,7 +11,7 @@ select * from CellPhoneColor;
 drop table if exists People;
 create table People(
 	PersonID int Primary KEY,
-	Name varchar(30),
+	Name varchar(30),  
 	CellPhoneID int	);
 
 insert People values (1, 'Serge',		1);

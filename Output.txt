@@ -13,6 +13,14 @@ Babushka                 3333
 Dedushka                 2222
 Serge                    1111
 Tristan                  1111
+Count: 4
+SQL:
+SELECT
+    [Extent2].[CellPhoneID] AS [CellPhoneID],
+    [Extent1].[Name] AS [Name],
+    [Extent2].[Number] AS [Number]
+    FROM  [dbo].[People] AS [Extent1]
+    INNER JOIN [dbo].[CellPhone] AS [Extent2] ON [Extent1].[CellPhoneID] = [Extent2].[CellPhoneID]
 
 
 People with phones (OUTER JOIN..phone NOT NULL)
@@ -21,6 +29,15 @@ Babushka                 3333
 Dedushka                 2222
 Serge                    1111
 Tristan                  1111
+Count: 4
+SQL:
+SELECT
+    [Extent2].[CellPhoneID] AS [CellPhoneID],
+    [Extent1].[Name] AS [Name],
+    [Extent2].[Number] AS [Number]
+    FROM  [dbo].[People] AS [Extent1]
+    INNER JOIN [dbo].[CellPhone] AS [Extent2] ON [Extent1].[CellPhoneID] = [Extent2].[CellPhoneID]
+    WHERE [Extent2].[Number] IS NOT NULL
 
 
 People with phones (OUTER JOIN)
@@ -31,11 +48,51 @@ McKayla
 Serge                    1111
 Serge
 Tristan                  1111
+Count: 6
+SQL:
+SELECT
+    1 AS [C1],
+    [Extent1].[Name] AS [Name],
+    [Extent2].[Number] AS [Number]
+    FROM  [dbo].[People] AS [Extent1]
+    LEFT OUTER JOIN [dbo].[CellPhone] AS [Extent2] ON [Extent1].[CellPhoneID] = [Extent2].[CellPhoneID]
+
+
+People * phones (multiplication)
+Name                     Number
+Babushka                 1111
+Babushka                 2222
+Babushka                 3333
+Babushka                 4444
+Dedushka                 4444
+Dedushka                 2222
+Dedushka                 3333
+Dedushka                 1111
+McKayla                  1111
+McKayla                  3333
+McKayla                  2222
+McKayla                  4444
+Serge                    4444
+Serge                    3333
+Serge                    4444
+Serge                    2222
+Serge                    3333
+Serge                    1111
+Serge                    1111
+Serge                    2222
+Tristan                  2222
+Tristan                  1111
+Tristan                  3333
+Tristan                  4444
+Count: 24
+SQL:
+SELECT
+    1 AS [C1],
+    [Extent1].[Name] AS [Name],
+    [Extent2].[Number] AS [Number]
+    FROM  [dbo].[People] AS [Extent1]
+    CROSS JOIN [dbo].[CellPhone] AS [Extent2]
 
 
 
 Press any key..
-
-
-
-
